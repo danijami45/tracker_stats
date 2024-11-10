@@ -24,7 +24,7 @@ class Stats extends CI_Controller {
 			$userAgent = $this->input->post("userAgent");
 			$ip = $this->input->ip_address();
 
-			// check if already visited in the past 24 hours
+			// check if already visited in the past 1 hour
 			$visitorRecord = $this->visitor_tracker_model->getVisitorRecord($siteUrl, $userAgent, $ip);
 			// declare empty string message variable
 			$message = '';
